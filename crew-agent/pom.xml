@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.aicrew</groupId>
+        <artifactId>ai-crew</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>crew-agent</artifactId>
+    <name>crew-agent</name>
+    <description>角色模块：角色人设、默认人设模板、Prompt 组装</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aicrew</groupId>
+            <artifactId>crew-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

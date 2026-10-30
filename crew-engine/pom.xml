@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.aicrew</groupId>
+        <artifactId>ai-crew</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>crew-engine</artifactId>
+    <name>crew-engine</name>
+    <description>协作引擎模块：剧本编排、Agent 轮转驱动、SSE 实时推送</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aicrew</groupId>
+            <artifactId>crew-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aicrew</groupId>
+            <artifactId>crew-llm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aicrew</groupId>
+            <artifactId>crew-agent</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

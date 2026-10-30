@@ -1,0 +1,86 @@
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; margin: 0; }
+body {
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  background: #f5f7fa;
+  color: #303133;
+}
+
+/* 布局 */
+.layout { height: 100%; }
+.aside {
+  background: #1d2935;
+  color: #cfd8e3;
+  display: flex; flex-direction: column;
+}
+.logo {
+  height: 60px; display: flex; align-items: center; gap: 8px;
+  padding: 0 18px; font-size: 17px; font-weight: 600; color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.aside .el-menu { border-right: none; background: transparent; }
+.aside .el-menu-item { color: #cfd8e3; }
+.aside .el-menu-item.is-active { color: #409eff; background: rgba(64,158,255,.12); }
+.aside .el-menu-item:hover { background: rgba(255,255,255,.06); }
+.main-area { padding: 16px 20px; overflow: auto; }
+
+/* 聊天时间线 */
+.chat-box {
+  background: #fff; border-radius: 8px; padding: 16px 20px;
+  height: calc(100vh - 200px); overflow-y: auto; border: 1px solid #ebeef5;
+}
+.msg { display: flex; margin-bottom: 18px; gap: 10px; }
+.msg.right { flex-direction: row-reverse; }
+.msg .avatar {
+  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; color: #fff;
+}
+.msg .body { max-width: 78%; }
+.msg .meta {
+  font-size: 12px; color: #909399; margin-bottom: 4px;
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+}
+.msg.right .meta { justify-content: flex-end; }
+.msg .bubble {
+  padding: 10px 14px; border-radius: 8px; background: #f4f6f9;
+  line-height: 1.65; font-size: 14px; word-break: break-word;
+  border: 1px solid #ebeef5;
+}
+.msg.right .bubble { background: #ecf5ff; border-color: #d9ecff; }
+.msg.system-msg {
+  justify-content: center; margin: 10px 0;
+}
+.msg.system-msg .sys-text {
+  font-size: 12px; color: #909399; background: #f5f7fa;
+  border-radius: 12px; padding: 4px 14px; border: 1px dashed #dcdfe6;
+}
+.msg .bubble.delivery {
+  background: #fdf6ec; border-color: #faecd8;
+}
+.msg .bubble.error-bubble { background: #fef0f0; border-color: #fde2e2; color: #c45656; }
+
+.bubble pre {
+  background: #282c34; color: #abb2bf; padding: 12px; border-radius: 6px;
+  overflow-x: auto; font-size: 13px;
+}
+.bubble code { font-family: 'SF Mono', Menlo, Consolas, monospace; }
+.bubble p { margin: 4px 0; }
+.bubble h1, .bubble h2, .bubble h3, .bubble h4 { margin: 10px 0 6px; font-size: 15px; }
+.bubble ul, .bubble ol { padding-left: 20px; margin: 4px 0; }
+.bubble table { border-collapse: collapse; margin: 6px 0; }
+.bubble th, .bubble td { border: 1px solid #dcdfe6; padding: 4px 10px; font-size: 13px; }
+
+/* 步骤进度 */
+.step-item {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px;
+  border-radius: 6px; margin-bottom: 6px; font-size: 13px;
+  border: 1px solid transparent;
+}
+.step-item.done { color: #67c23a; }
+.step-item.active { background: #ecf5ff; border-color: #d9ecff; color: #409eff; font-weight: 600; }
+.step-item.pending { color: #909399; }
+
+.page-card { background: #fff; border-radius: 8px; padding: 18px 20px; border: 1px solid #ebeef5; margin-bottom: 16px; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.toolbar h3 { margin: 0; font-size: 16px; }

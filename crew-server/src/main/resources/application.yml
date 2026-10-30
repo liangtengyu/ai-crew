@@ -1,0 +1,22 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: ai-crew
+  datasource:
+    # H2 文件数据库，零配置；数据落在 ./data/aicrew.mv.db
+    url: jdbc:h2:file:./data/aicrew;MODE=MySQL;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  jackson:
+    time-zone: Asia/Shanghai
+
+logging:
+  level:
+    com.aicrew: info
